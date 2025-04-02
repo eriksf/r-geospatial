@@ -1,6 +1,6 @@
-FROM rocker/geospatial:4.2.2
+FROM rocker/geospatial:4.4.2
 
-# install rwc
-RUN install2.r --error --skipmissing --skipinstalled rwc nloptr
+# install sdm and usdm
+RUN install2.r --error --skipmissing --skipinstalled sdm usdm
 
 CMD [ "R" ]
