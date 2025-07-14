@@ -9,7 +9,7 @@ RUN apt-get update && \
 ENV LD_LIBRARY_PATH=/usr/local/lib/R/lib:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server:$LD_LIBRARY_PATH
 
 # install sdm, usdm, rJava, and dismo
-RUN install2.r --error --skipmissing --skipinstalled sdm usdm rJava dismo Rcpp codetools
+RUN install2.r --error --skipmissing --skipinstalled sdm usdm rJava dismo Rcpp codetools ENMeval ecospat geodata blockCV
 
 #install all sdm reqs
 RUN R -e 'sdm::installAll()'; exit 0
